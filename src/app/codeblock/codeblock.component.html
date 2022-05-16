@@ -1,0 +1,20 @@
+
+
+  <div class="pagination">
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+
+    </mat-paginator>
+</div>
+<mat-grid-list cols="4" >
+    <mat-grid-tile *ngFor="let character of characters">
+
+        <img class="picture" [src]="character.img" />
+
+        <mat-grid-tile-header>
+            <h3 [ngStyle]="{color: getCharacterColor(character)}">{{character.name}}</h3>
+
+        </mat-grid-tile-header>
+
+    </mat-grid-tile>
+  
+</mat-grid-list>
